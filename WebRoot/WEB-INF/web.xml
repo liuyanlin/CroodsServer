@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>ServerTheCroods</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>Test</servlet-name>
+		<servlet-class>com.thecroods.pay.mo9.Action.TestAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Test</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>notifyHandler</servlet-name>
+		<servlet-class>com.thecroods.pay.mo9.Action.Mo9Action</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>notifyHandler</servlet-name>
+		<url-pattern>/notify</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PrivateKey</servlet-name>
+		<servlet-class>com.thecroods.pay.mo9.Action.GetPrivateKey</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PrivateKey</servlet-name>
+		<url-pattern>/getPrivateKey</url-pattern>
+	</servlet-mapping>
+  
+  <!-- Sina -->
+	<servlet>
+		<servlet-name>SinaAuth</servlet-name>
+		<servlet-class>com.thecroods.sina.action.SinaGetInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SinaAuth</servlet-name>
+		<url-pattern>/sina_getinfo</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Sina_SetInfo</servlet-name>
+		<servlet-class>com.thecroods.sina.action.SinaSetInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Sina_SetInfo</servlet-name>
+		<url-pattern>/sina_setinfo</url-pattern>
+	</servlet-mapping>
+  
+  <!-- alipay -->
+	<servlet>
+		<servlet-name>AliPay</servlet-name>
+		<servlet-class>com.thecroods.pay.alipay.action.Notify</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AliPay</servlet-name>
+		<url-pattern>/ali_notify</url-pattern>
+	</servlet-mapping>
+  
+  <!-- baidu -->
+	<servlet>
+		<servlet-name>MoboJoy</servlet-name>
+		<servlet-class>com.thecroods.pay.bumobo.action.BaiduPay</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MoboJoy</servlet-name>
+		<url-pattern>/moboJoy</url-pattern>
+	</servlet-mapping>  
+  	<servlet>
+		<servlet-name>MoboLogin</servlet-name>
+		<servlet-class>com.thecroods.pay.bumobo.action.BaiduLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MoboLogin</servlet-name>
+		<url-pattern>/moboLogin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+  <!-- QiHoo360 -->
+  	<servlet>
+		<servlet-name>QOPay</servlet-name>
+		<servlet-class>com.thecroods.pay.qihoo.servlet.QihooUser</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QOPay</servlet-name>
+		<url-pattern>/qo_pay</url-pattern>
+	</servlet-mapping>
+  	<servlet>
+		<servlet-name>QOPay_Notify</servlet-name>
+		<servlet-class>com.thecroods.pay.qihoo.servlet.PayCallback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QOPay_Notify</servlet-name>
+		<url-pattern>/qo_notify</url-pattern>
+	</servlet-mapping>  
+  
+	
+
+  
+  <!-- 畅游 -->
+	<servlet>
+		<servlet-name>CyPay</servlet-name>
+		<servlet-class>com.thecroods.pay.cymobo.action.CyPay</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CyPay</servlet-name>
+		<url-pattern>/cypay</url-pattern>
+	</servlet-mapping>
+	<servlet>  
+  
+  <!-- 兑换码 -->
+  	<servlet>
+		<servlet-name>Code_Generate</servlet-name>
+		<servlet-class>com.thecroods.client.gift.action.GenerateGiftCode</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Code_Generate</servlet-name>
+		<url-pattern>/generate</url-pattern>
+	</servlet-mapping>    
+</web-app>
